@@ -1,0 +1,79 @@
+.select {
+  position: relative;
+  width: 181px;
+
+  input {
+    padding: 10px 40px 15px 15px;
+    width: 100%;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: 1px solid var(--gray);
+    background: var(--white);
+    height: 43px;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 0;
+    &:focus {
+      outline: none;
+    }
+  }
+
+  svg {
+    position: absolute;
+    right: 22px;
+    top: 12px;
+  }
+
+  &__open {
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.dropdown {
+  display: flex;
+  position: relative;
+
+  &__list {
+    display: flex;
+    width: 100%;
+    z-index: 2;
+    position: absolute;
+    flex: 1 1 auto;
+    overflow: auto;
+    flex-direction: column;
+    margin-top: 4px;
+    height: auto;
+    max-height: 0;
+    font-weight: 300;
+
+    &__open {
+      border: 1px solid var(--gray);
+      max-height: 256px;
+      height: 171px;
+    }
+
+    &__item {
+      border-bottom: 1px solid var(--gray);
+      background-color: var(--white);
+
+      &.active {
+        background-color: var(--hightlight);
+      }
+
+      &:hover {
+        background-color: var(--hightlight);
+      }
+
+      button {
+        width: 100%;
+        text-align: left;
+        padding: 10px 15px;
+        background-color: transparent;
+        border: none;
+      }
+    }
+  }
+}
