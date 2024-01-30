@@ -1,0 +1,9 @@
+@import 'reset';
+@import 'variables/global';
+
+.app {
+  font: var(--font);
+  color: var(--primary-color);
+  min-height: 100vh;
+  height: 100%;
+}
